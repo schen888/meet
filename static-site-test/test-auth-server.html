@@ -19,6 +19,7 @@
 
   <body>
     <main id="container">
+      <!-- step 1 -->
       <h1>OAuth2 Test</h1>
         <h4><b>Step 1:</b> Get OAuth URL</h4>
         <p>Click the button below to get your OAuth URL.</p>
@@ -49,7 +50,6 @@
       const getCodeElement = document.getElementById("getCode");
       const resultElement = document.getElementById("result");
       const resultLink = document.getElementById("authURL");
-      // Replace this with your own endpoint
       const getAuthURL = "https://kfvp75koo8.execute-api.eu-central-1.amazonaws.com/dev/api/get-auth-url";
 
       getCodeElement.onclick = function () {
@@ -59,9 +59,7 @@
           })
           .then(function (json) {
             const result = JSON.stringify(json);
-            // we get the value of authUrl
             const { authUrl } = JSON.parse(result);
-            // then add it to the html
             resultElement.innerText = result;
             resultLink.href = authUrl;
           });
@@ -76,7 +74,6 @@
       getAccessToken.onclick = function () {
         let code = codeValue.value;
 
-        // if the authorization code is not URL-encoded, then URL-encode it.
         if (decodeURIComponent(code) === code) {
           code = encodeURIComponent(codeValue.value);
         }

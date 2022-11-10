@@ -1,12 +1,10 @@
 service: auth-server
 
-frameworkVersion: '3'
-
 provider:
   name: aws
   runtime: nodejs12.x
   region: eu-central-1
-  timeout: 60 # optional, in seconds, default is 
+  timeout: 60
   environment:
       CLIENT_ID: ${file(config.json):CLIENT_ID}
       CLIENT_SECRET: ${file(config.json):CLIENT_SECRET}
