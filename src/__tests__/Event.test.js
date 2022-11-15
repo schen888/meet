@@ -34,35 +34,22 @@ describe('<Event /> component', () => {
     expect(EventWrapper.find('.show-details')).toHaveLength(1);
   });
 
-  test('render "About event" element', () => {
+  test('render event details', () => {
     EventWrapper.find('.show-details').simulate('click');
-    /* expect(EventWrapper.state('detailsHidden')).toBe(false); */
+    expect(EventWrapper.state('detailsHidden')).toBe(false);
     expect(EventWrapper.find('.about-event')).toHaveLength(1);
-  });
-
-  test('render "link-to-google" element', () => {
-    EventWrapper.find('.show-details').simulate('click');
     expect(EventWrapper.find('.link-to-google')).toHaveLength(1);
-  });
-
-  test('render correct "link-to-google" link', () => {
-    EventWrapper.find('.show-details').simulate('click');
     expect(EventWrapper.find('.link-to-google').prop('href')).toBe(event.htmlLink);
-  });
-
-  test('render "description" element', () => {
-    EventWrapper.find('.show-details').simulate('click');
     expect(EventWrapper.find('.description')).toHaveLength(1);
-  });
-  
-  test('render correct description', () => {
-    EventWrapper.find('.show-details').simulate('click');
     expect(EventWrapper.find('.description').text()).toBe(event.description);
+    expect(EventWrapper.find('.hide-details')).toHaveLength(1);
   });
 
-  test('render "hide-details" button', () => {
-    EventWrapper.find('.show-details').simulate('click');
-    expect(EventWrapper.find('.hide-details')).toHaveLength(1);
+  test('render hide event details', () => {
+    EventWrapper.find('.hide-details').simulate('click');
+    expect(EventWrapper.state('detailsHidden')).toBe(true);
+    expect(EventWrapper.find('.about-event')).toHaveLength(0);
+    expect(EventWrapper.find('button.show-details')).toHaveLength(1);
   });
 
 });

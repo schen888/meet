@@ -16,9 +16,10 @@ class Event extends Component {
 
   render() {
     const { event } = this.props;
+
     return (
       <div className="Event">
-        <div className="summary">{event.summary}</div>
+        <h2 className="summary">{event.summary}</h2>
         <div className="start-time">{`${event.start.dateTime} (${event.start.timeZone})`}</div>
         {this.state.detailsHidden===true
         ? <button type="button" className="show-details" onClick={this.onClickedShowDetails}>Show details</button>
