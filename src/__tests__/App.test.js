@@ -91,6 +91,7 @@ describe('<App /> integration', () => {
   test('The number of events rendered matching the input number', async () => {
     const AppWrapper = mount(<App />);
     const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
+    const EventListWrapper = AppWrapper.find(EventList);
     const eventObject = { target: { value: 1 } };
     await NumberOfEventsWrapper.instance().handleInputChanged(eventObject);
     await getEvents();
