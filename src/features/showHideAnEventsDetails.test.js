@@ -52,7 +52,6 @@ defineFeature(feature, test=>{
       });
 
       when('the user click on the hide button', () => {
-        AppWrapper.update();
         AppWrapper.find('.Event .hide-details').at(0).simulate('click');
       });
 

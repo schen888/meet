@@ -61,7 +61,8 @@ defineFeature(feature, test => {
     });
 
     and('the user should receive a list of upcoming events in that city', () => {
-      expect(AppWrapper.find('.Event')).toHaveLength(mockData.length);
-    }); //????? shouldn't return only 1 event in Berlin???
+      AppWrapper.update();
+      expect(AppWrapper.find('.Event')).toHaveLength(1);
+    });
   });
 });
