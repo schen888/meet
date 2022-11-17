@@ -21,6 +21,7 @@ class Event extends Component {
       <div className="Event">
         <h2 className="summary">{event.summary}</h2>
         <div className="start-time">{`${event.start.dateTime} (${event.start.timeZone})`}</div>
+        <div className="location">@{event.summary} | {event.location}</div>
         {this.state.detailsHidden===true
         ? <button type="button" className="show-details" onClick={this.onClickedShowDetails}>Show details</button>
         : (<div className="about-event">

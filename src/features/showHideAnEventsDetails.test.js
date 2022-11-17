@@ -35,17 +35,11 @@ defineFeature(feature, test=>{
       });
 
       when('the user click on one event (or show button)', () => {
-        const EventList=AppWrapper.find('.EventList li');
-        EventList.map(li=>{
-          li.find(Event).find('button.show-details').simulate('click');
-        })
+        AppWrapper.find('.Event .show-details').at(0).simulate('click');
       });
 
       then('detailed info of that event should be shown to the user', () => {
-        const EventList=AppWrapper.find('.EventList li');
-        EventList.map(li=>{
-          expect(li.find(Event).find('.about-event')).toHaveLength(1);
-        })
+        expect(AppWrapper.find('.Event .about-event').at(0)).toHaveLength(1);
       });
     });
 
@@ -55,18 +49,7 @@ defineFeature(feature, test=>{
         AppWrapper=await mount(<App />);
         AppWrapper.update();
         AppWrapper.find('.Event .show-details').at(0).simulate('click');
-        //expect(AppWrapper.find('.Event .about-event').at(0)).toHaveLength(1);
       });
-
-      /* given('the detailed info has been shown to the user', async () => {
-        AppWrapper=await mount(<App />);
-        AppWrapper.update();
-        const EventList=AppWrapper.find('.EventList li');
-        EventList.map(li=>{
-          li.find(Event).find('button.show-details').simulate('click');
-          expect(li.find(Event).find('.about-event')).toHaveLength(1);
-        })
-      }); */
 
       when('the user click on the hide button', () => {
         AppWrapper.update();
