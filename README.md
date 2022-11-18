@@ -1,6 +1,6 @@
 ## Meet APP ##
 A serverless, progressive web application (PWA) with React built by using test-driven development (TDD) technique. The documentation (acceptance test) of the app was built by applying the behavior-driven development (BDD) technique. The application uses OAuth 2.0 to access and use the Google Calendar API to fetch upcoming events.
-### Demo for the App: ###
+### Link to the App: ###
 https://schen888.github.io/meet/
 ### Key Features ###
 #### 1. Filter events by city ####
