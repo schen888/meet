@@ -1,16 +1,6 @@
 import React, { Component } from 'react';
 
 class CitySearch extends Component {
-  /* constructor(){
-    super();
-
-    this.state = {
-      query: ''
-    }
-
-    this.handleInputChanged=this.handleInputChanged.bind(this);
-  } */
-
   state = {
     query: '',
     suggestions: [],
@@ -34,7 +24,7 @@ class CitySearch extends Component {
       showSuggestions: false
     });
 
-    this.props.updateEvents(suggestion); //what would happen when here use query as parameter?
+    this.props.updateEvents(suggestion);
   }
 
   render() {
@@ -47,6 +37,7 @@ class CitySearch extends Component {
           value={this.state.query}
           onChange={this.handleInputChanged}
           onFocus={() => { this.setState({ showSuggestions: true }) }}
+          onBlur={() => { this.setState({ showSuggestions: false }) }}
           />
         <ul className="suggestions" style={this.state.showSuggestions ? {}: { display: 'none' }}>
           {this.state.suggestions.map((suggestion) => (

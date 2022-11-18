@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 class NumberOfEvents extends Component {
 
   state={
@@ -11,7 +10,7 @@ class NumberOfEvents extends Component {
     const inputValue=e.target.value;
     
     if (inputValue<1) {
-      alert('Please select a number from 1 to 50.');
+      alert('Please select a number from 1 to 32.');
     } else {
       this.props.updateEvents(null, inputValue);
       this.setState({
@@ -28,7 +27,7 @@ class NumberOfEvents extends Component {
           type="number"
           className="number"
           min="1"
-          max="50"
+          max="32"
           value={this.state.eventCount}
           onChange={this.handleInputChanged}
         />

@@ -10,13 +10,6 @@ atatus.config('9bacbd9b54014667aac0a7737b491f6c').install();
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
-/* const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-); */
-
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://cra.link/PWA

@@ -15,7 +15,7 @@ defineFeature(feature, test => {
     let AppWrapper;
     when('the user opens the app', () => {
       AppWrapper = mount(<App />);
-    }); // why don't we need async here?
+    });
 
     then('the user should see the list of upcoming events.', () => {
       AppWrapper.update();
