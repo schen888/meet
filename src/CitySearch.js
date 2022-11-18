@@ -6,12 +6,14 @@ class CitySearch extends Component {
     suggestions: [],
     showSuggestions: undefined
   }
-  
+
   handleInputChanged = (event) => {
     const value = event.target.value;
-    const suggestions = this.props.locations.filter((location) => {
+    const suggestions = value
+    ? this.props.locations.filter((location) => {
       return location.toUpperCase().indexOf(value.toUpperCase()) > -1;
-    });
+    })
+    : [];
     this.setState({
       query: value,
       suggestions,
@@ -29,7 +31,7 @@ class CitySearch extends Component {
 
   render() {
     return (
-      <div className="CitySearch">
+      <div className="CitySearch" >
         <input 
           type="text"
           className="city"
@@ -43,10 +45,10 @@ class CitySearch extends Component {
           {this.state.suggestions.map((suggestion) => (
             <li
               key={suggestion}
-              onClick={() => this.handleItemClicked(suggestion)}
+              onMouseDown={() => this.handleItemClicked(suggestion)}
             >{suggestion}</li>
           ))}
-          <li key='all' onClick={() => this.handleItemClicked("all")}>
+          <li key='all' onMouseDown={() => this.handleItemClicked("all")}>
             <b>See all cities</b>
           </li>
         </ul>
