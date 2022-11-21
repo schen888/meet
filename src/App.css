@@ -44,7 +44,7 @@ input[type="number"] {
   display: flex;
   flex-direction: column;
   flex-basis: 300px;
-  max-width: 300px;
+  max-width: 600px;
   margin: auto;
   position: relative;
 }
@@ -55,7 +55,7 @@ input[type="number"] {
   z-index: 2;
   align-self: center;
   margin: 0;
-  top: 43px;
+  top: 40px;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
@@ -118,9 +118,13 @@ button.show-details, button.hide-details {
 }
 
 .NumberOfEvents {
-  width: 200px;
+  width: 250px;
   margin: 20px auto;
   text-align: center;
+}
+
+.NumberOfEvents .number {
+  margin: 5px 0 0 0;
 }
 
 .button-wrapper {
@@ -129,11 +133,6 @@ button.show-details, button.hide-details {
   grid-gap: 20px;
   padding: 20px;
   font-family: sans-serif;
-}
-
-.Alert {
-  position: fixed;
-  top: 20px;
 }
 
 .data-vis-wrapper {
