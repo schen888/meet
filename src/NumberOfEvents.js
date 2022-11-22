@@ -28,10 +28,10 @@ class NumberOfEvents extends Component {
   render() {
     return (
       <div className='NumberOfEvents'>
-        <lable for="number">Number of Events: </lable>
+        <lable for="number-of-events">Number of Events: </lable>
         <input 
           type="number"
-          id="number"
+          id="number-of-events"
           className="number"
           min="1"
           max="32"

@@ -50,7 +50,7 @@ input[type="number"] {
 }
 
 lable[for="city"],
-lable[for="number"] {
+lable[for="number-of-events"] {
     margin-bottom: 10px;
     font-weight: 700;
 }
@@ -143,7 +143,7 @@ lable[for="number"] {
   text-align: center;
 }
 
-.OfflineAlert {
+.OfflineAlert p {
   margin: 0 auto;
 }
 
