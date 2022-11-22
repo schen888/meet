@@ -45,8 +45,10 @@ class CitySearch extends Component {
   render() {
     return (
       <div className="CitySearch" >
+        <lable for="city">Choose your nearest city:</lable>
         <input 
           type="text"
+          id="city"
           className="city"
           placeholder='Search city'
           value={this.state.query}
