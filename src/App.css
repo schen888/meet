@@ -83,21 +83,19 @@ lable[for="number"] {
 }
 
 .Event {
-  padding: 10px 10px 35px;
+  padding: 10px;
   margin-bottom: 10px;
   text-align: left;
   border: 1px solid #ccc;
   border-radius: 4px;
-  position: relative;
   max-width: 1000px;
   margin-left: auto;
   margin-right:auto;
 }
 
 .show-details, .hide-details {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
+  display: flex;
+  margin: 15px 0 0 auto;
   padding: 5px 8px;
   outline: none;
   border-radius: 8px;
@@ -129,7 +127,7 @@ lable[for="number"] {
 }
  */
  .about-event {
-  margin: 5px 0 20px 0;
+  margin-top: 5px;
  }
 
 .description {
@@ -143,6 +141,10 @@ lable[for="number"] {
   width: 250px;
   margin: 0px auto 30px;
   text-align: center;
+}
+
+.OfflineAlert {
+  margin: 0 auto;
 }
 
 /* .button-wrapper {

@@ -22,11 +22,19 @@ class App extends Component {
   async componentDidMount() {
     this.mounted = true;
     const accessToken = localStorage.getItem('access_token');
-    const isTokenValid = (await checkToken(accessToken)).error ? false : true;
-    const searchParams = new URLSearchParams(window.location.search);
-    const code = searchParams.get("code");
-    this.setState({ showWelcomeScreen: !(code || isTokenValid) });
-    if ((code || isTokenValid) && this.mounted) {
+    let shouldGetEvents;
+    if (navigator.onLine) {
+      const isTokenValid = (await checkToken(accessToken)).error ? false : true;
+      const searchParams = new URLSearchParams(window.location.search);
+      const code = searchParams.get("code");
+      this.setState({ showWelcomeScreen: !(code || isTokenValid) });
+      shouldGetEvents = (code || isTokenValid) && this.mounted;
+    } else {
+      shouldGetEvents = accessToken && this.mounted;
+      this.setState({showWelcomeScreen: false});
+    }
+
+    if (shouldGetEvents) {
       getEvents().then((events) => {
         if (this.mounted) {
           this.setState({ events, locations: extractLocations(events) });
@@ -71,8 +79,12 @@ class App extends Component {
 
     return (
       <div className="App">
+        {!navigator.onLine && 
+        <OfflineAlert 
+          text='You are currently offline. The event list may be not up-to-date.'
+          className='OfflineAlert'
+        />}
         <h1>Meet App</h1>
-        {!navigator.onLine && <OfflineAlert text='You are currently offline. The event list may not be up-to-date.'/>}
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
         <NumberOfEvents updateEvents={this.updateEvents}/>
         <EventList events={this.state.events}/>
