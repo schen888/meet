@@ -11,12 +11,25 @@
     margin: 150px auto;
   }
 
+  .logo {
+    width: 100px;
+  }
+
+  .logo-header-container {
+    display: flex;
+    justify-content: center;
+  }
+
   .welcome-container h1 {
-    margin: 30px auto;
+    margin: 30px;
   }
 
   .welcome-container h4 {
     margin: 25px auto;
+  }
+
+  .button_cont{
+    margin-top:66px;
   }
 
   .login-button {
