@@ -40,8 +40,9 @@
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
   }
 
-  .google-btn:hover {
+  .google-btn:hover, .btn-text:hover  {
     box-shadow: 0 0 6px #4285f4;
+    cursor: pointer;
   }
   
   .google-btn:active {
