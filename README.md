@@ -88,7 +88,14 @@ Then a chart with an overview, indicating the number of upcoming events by city 
 ```
 
 ### App Showcase
-<img alt="A screenshot of the welcome-page of Meet App" src="/img/Screenshot1.png" width="45%">
-<img alt="A screenshot of the Meet App after sign in with google account" src="/img/Screenshot2.png" width="48%">
-<img alt="A screenshot after giving 'Berlin' in the search field." src="/img/Screenshot3.png" width="45%">
-<img alt="A screenshot when the app is offline." src="/img/Screenshot4.png" width="48%">
+- Welcome-page of Meet App
+<img alt="A screenshot of the welcome-page of Meet App" src="/img/Screenshot1.png" width="100%">
+
+- Meet App after sign in with google account
+<img alt="A screenshot of the Meet App after sign in with google account" src="/img/Screenshot2.png" width="100%">
+
+- Giving 'Berlin' in the search field
+<img alt="A screenshot after giving 'Berlin' in the search field." src="/img/Screenshot3.png" width="100%">
+
+- PWA
+<img alt="A screenshot when the app is offline." src="/img/Screenshot4.png" width="100%">
