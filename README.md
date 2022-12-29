@@ -84,5 +84,11 @@ Then an error message should be shown, informing the user internet is required
 ```
 Given the user hasn't searched a specific city
 When the user opens the app
-Then a chart with an overview, indicating the number of upcoming events by city will be shown. 
+Then a chart with an overview, indicating the number of upcoming events by city will be shown.
 ```
+
+### App Showcase
+<img alt="A screenshot of the welcome-page of Meet App" src="/img/Screenshot1.png" width="100%">
+<img alt="A screenshot of the Meet App after sign in with google account" src="/img/Screenshot2.png" width="100%">
+<img alt="A screenshot after giving 'Berlin' in the search field." src="/img/Screenshot3.png" width="100%">
+<img alt="A screenshot when the app is offline." src="/img/Screenshot4.png" width="100%">
